@@ -1,0 +1,13 @@
+<%= form_with(model: game, local: true) do |form| %>
+  
+  <%= form.fields_for :matches do |builder, index| %>
+    <%= render 'players/player_form', :f => builder %>
+  <% end %>
+
+  <div class="actions">
+  <%= form.submit %>
+  <span class="f-left">
+    <a href="/">Back</a>
+  </span>
+  </div>
+<% end %>

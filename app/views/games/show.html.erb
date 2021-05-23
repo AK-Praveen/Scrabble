@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game details:</strong>
+</p>
+
+<p>
+  <strong>name:</strong>
+  <%= @game.name %>
+</p>
+
+<p>
+  <strong>Matches details:</strong>
+</p>
+
+<p>
+  <strong>Player 1:</strong>
+</p> 
+<p>
+  <strong>Name :</strong>
+  <%= @game.matches.first.player.first_name %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @game.matches.first.score %>
+</p>
+
+<p>
+  <strong>Player 2:</strong>
+</p> 
+<p>
+  <strong>Name :</strong>
+  <%= @game.matches.second.player.first_name %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @game.matches.second.score %>
+</p>
+
+<p>
+  <strong>Winer details:</strong>
+</p>
+
+<p>
+  <strong><%=@game.matches.first.score > @game.matches.second.score ? @game.matches.first.player.first_name : @game.matches.second.player.first_name%> Won the game by <%=@game.matches.first.score > @game.matches.second.score ? @game.matches.first.score : @game.matches.second.score%></strong>
+</p> 
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>

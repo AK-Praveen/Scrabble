@@ -1,0 +1,56 @@
+<div class="container table-responsive py-5 w-50"> 
+  <table class="table table-bordered table-hover w-50">
+    <thead class="thead-dark">
+      <tr>
+        <th colspan='2' scope="row">Player Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">First Name</th>
+        <td><%= @player.first_name %></td>
+      </tr>
+      <tr>
+        <th scope="row">Last_name</th>
+        <td><%= @player.last_name %></td>
+      </tr>
+      <tr>
+        <th scope="row">Contact Number</th>
+        <td><%= @player.contact_number %></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><%= @player.email %></td>
+      </tr>
+      <tr>
+        <th scope="row">Number Of Wins</th>
+        <td><%= @win %></td>
+      </tr>
+      <tr>
+        <th scope="row">Number Of Losses</th>
+        <td><%= @loss %></td>
+      </tr>
+      <tr>
+        <th scope="row">Average Score</th>
+        <td><%= @average_score %></td>
+      </tr>
+      <tr>
+        <th scope="row">Highest Score</th>
+        <td><%= @highest_score %></td>
+      </tr>
+      <tr>
+        <th scope="row">Played at</th>
+        <td><%= @created_at %></td>
+      </tr>
+      <tr>
+        <th scope="row">Opponent</th>
+        <td><%= @opponent %></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan='2'><%= link_to 'Edit', edit_player_path(@player) %> <%= link_to 'Back', players_path, class: "f-left" %></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
